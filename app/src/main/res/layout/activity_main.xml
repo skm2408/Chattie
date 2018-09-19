@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/auth_background"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="70dp"
+            android:text="Chattie"
+            android:gravity="center|right"
+            android:textSize="50sp"
+            android:textStyle="italic|bold"
+            android:fontFamily="cursive"
+            android:textColor="@android:color/white"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_gravity="end"
+            android:layout_weight="2"
+            android:src="@drawable/login_chat" />
+    </LinearLayout>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.gms.common.SignInButton
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:id="@+id/btnGoogleSignIn"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnSignOut"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:text="Sign Out"
+                android:visibility="gone"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
